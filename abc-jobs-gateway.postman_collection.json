@@ -1,0 +1,75 @@
+{
+	"info": {
+		"_postman_id": "d5ba6153-462c-4bbf-a3e3-3b286f884ed2",
+		"name": "abc-jobs-gateway",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"usuario\": \"admin\",\r\n    \"contrasena\": \"Miso#2023\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5005/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5005",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create project",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY5NTg4MDQ4MCwianRpIjoiZDA1NmQ2OWItMjQwOC00NTNlLWFjZTUtMmNiMzRkNjM5N2VmIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNjk1ODgwNDgwLCJleHAiOjE2OTU4ODEzODB9.YBi0WgDyXaGoeJbWd0sOv2tQAfrytH7fldm5A5__kIo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"MISO\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5005/create-project",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5005",
+					"path": [
+						"create-project"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
