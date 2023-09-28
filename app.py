@@ -20,7 +20,15 @@ def post_login_user():
 @app.route('/create-project', methods=['POST'])
 def post_autorization():
     return Oferta.create_project(Oferta, "/oferta")
-    
+
+@app.errorhandler(404)
+def resource_not_found(error):
+    return {}, 404
+
+@app.errorhandler(500)
+def resource_not_found(error):
+    return {}, 500
+
 
 if __name__ == '__main__':
     app.run(port=5005)
