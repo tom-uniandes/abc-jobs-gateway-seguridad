@@ -26,7 +26,7 @@ def resource_not_found(error):
     return {}, 404
 
 @app.errorhandler(500)
-def resource_not_found(error):
+def resource_internal_error(error):
     return {}, 500
 
 
