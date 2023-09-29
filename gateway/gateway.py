@@ -1,8 +1,8 @@
 from flask import request, json
 import requests
 
-urlBaseSesion = 'http://localhost:5003'
-urlBaseOferta = 'http://localhost:5002'
+urlBaseSesion = 'http://sesion:5003'
+urlBaseOferta = 'http://oferta:5002'
 
 class Sesion:
     def login_user(self, endpoint):
